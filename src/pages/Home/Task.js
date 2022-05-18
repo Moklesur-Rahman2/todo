@@ -10,7 +10,7 @@ const Task = ({ task, tasks, setTasks }) => {
     const handleDeleteTask = (id) => {
         const process = window.confirm('Would you like to DELETE?')
         if (process) {
-            const url = `http://localhost:8000/task/${id}`
+            const url = `https://todobd.herokuapp.com/task/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

@@ -13,7 +13,7 @@ const Home = () => {
         const newTask = { title, des }
 
         // Post new Book to server
-        const url = 'http://localhost:8000/task'
+        const url = 'https://todobd.herokuapp.com/task'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -33,7 +33,7 @@ const Home = () => {
 
     const [tasks, setTasks] = useState([])
     useEffect(() => {
-        const url = 'http://localhost:8000/task'
+        const url = 'https://todobd.herokuapp.com/task'
         fetch(url)
             .then(res => res.json())
             .then(data => setTasks(data))
